@@ -35,11 +35,8 @@
 {"type":"Response.Item.Value.Contains","app":"CDN.Incapsula","find":{"item":"x-cdn","grep":"Incapsula"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.UCloud_CDN","find":{"item":"x-server-id","grep":"ucac"}}
 
-#Manager & Panel
-{"type":"Route.Exists","app":"Manager.phpMyAdmin","find":{"path":"/phpmyadmin/index.php"}}
 #Framework 
 {"type":"Response.Context.Contains","app":"Framework.ThinkPHP","find":{"grep":"thinkphp"}}
 #Device
-{"type":"Route.Context.Contains","app":"Device.Phicomm_Router","find":{"path":"/login.asp","grep":"400-720-5677"}}
 {"type":"Response.Context.Contains","app":"Device.ASUS_RT-N56U_Router","find":{"grep":"rt-n56u"}}
 {"type":"Response.Context.Contains","app":"Device.D-Link_DIR_Series_Router","find":{"grep":"dir-"}}

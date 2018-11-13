@@ -8,6 +8,7 @@ namespace KitsuneEy
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
