@@ -1,0 +1,42 @@
+#App
+{"type":"Index.Context.Contains","app":"CMS.joomla","find":{"grep":"/media/system/js/caption.js"}}
+{"type":"Index.Context.Contains","app":"Blog.WordPress","find":{"grep":"meta name=\"generator\" content=\"WordPress "}}
+{"type":"Response.Cookie.Contains","app":"BBS.Discuz","find":{"grep":"_saltkey="}}
+
+#CDN&IDC
+{"type":"Response.Item.Contains","app":"CDN.Qiniu","find":{"grep":"x-qnm-cache"}}
+{"type":"Response.Item.Contains","app":"CDN.Qiniu","find":{"grep":"x-qiniu-zone"}}
+{"type":"Response.Item.Contains","app":"CDN.Github_Pages","find":{"grep":"x-github-request-id"}}
+{"type":"Response.Item.Contains","app":"CDN.Fastly","find":{"grep":"x-fastly-request-id"}}
+{"type":"Response.Item.Contains","app":"CDN.Netlify","find":{"grep":"x-nf-request-id"}}
+{"type":"Response.WebServer.Contains","app":"CDN.TencentCloud_COS","find":{"grep":"tencent-cos"}}
+{"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"X-NWS-LOG-UUID"}}
+{"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"x-swift-cachetime"}}
+{"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"ali-swift-global-savetime"}}
+{"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-rid"}}
+{"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"x-powered-by-360wzb"}}
+{"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"WZWS-RAY"}}
+{"type":"Response.Item.Contains","app":"CDN.Knownsec_JSL","find":{"grep":"X-Via-JSL"}}
+{"type":"Response.Item.Contains","app":"CDN.Anquanbao","find":{"grep":"X-Powered-By-Anquanbao"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Baidu_Su","find":{"grep":"yunjiasu-nginx"}}
+{"type":"Response.Item.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":"Powered-By-ChinaCache"}}
+{"type":"Response.Item.Contains","app":"CDN.VeryCloud_CDN","find":{"grep":"Powered-By-VeryCDN"}}
+{"type":"Response.Context.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":".lxdns.com"}}
+{"type":"Response.Context.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":"ChinaCache"}}
+{"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":".51cdn.com"}}
+{"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":".wscloudcdn.com"}}
+{"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":".wscdns.com"}}
+{"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":"(Cdn Cache Server V2.0)"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.QsSec_AntiDDos","find":{"item":"X-Powered-By-Defense","grep":"qssec"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.BaishanCloud_CDN(not sure)","find":{"item":"X-Ser","grep":"bc"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Incapsula","find":{"item":"x-cdn","grep":"Incapsula"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.UCloud_CDN","find":{"item":"x-server-id","grep":"ucac"}}
+
+#Manager & Panel
+{"type":"Route.Exists","app":"Manager.phpMyAdmin","find":{"path":"/phpmyadmin/index.php"}}
+#Framework 
+{"type":"Response.Context.Contains","app":"Framework.ThinkPHP","find":{"grep":"thinkphp"}}
+#Device
+{"type":"Route.Context.Contains","app":"Device.Phicomm_Router","find":{"path":"/login.asp","grep":"400-720-5677"}}
+{"type":"Response.Context.Contains","app":"Device.ASUS_RT-N56U_Router","find":{"grep":"rt-n56u"}}
+{"type":"Response.Context.Contains","app":"Device.D-Link_DIR_Series_Router","find":{"grep":"dir-"}}
