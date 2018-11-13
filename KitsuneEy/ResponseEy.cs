@@ -44,5 +44,10 @@ namespace KitsuneEy
         {
             return headers.Get(itemStr).Contains(contextStr);
         }
+
+        public static bool GetContextContains(WebHeaderCollection headers, string contextStr)
+        {
+            return headers.ToString().Contains(contextStr);
+        }
     }
 }
