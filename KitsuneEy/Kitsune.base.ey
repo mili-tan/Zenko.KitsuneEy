@@ -9,16 +9,21 @@
 {"type":"Response.Item.Contains","app":"CDN.Github_Pages","find":{"grep":"x-github-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Fastly","find":{"grep":"x-fastly-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Netlify","find":{"grep":"x-nf-request-id"}}
-{"type":"Response.WebServer.Contains","app":"CDN.TencentCloud_COS","find":{"grep":"tencent-cos"}}
+{"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"NWS_TCloud"}}
 {"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"X-NWS-LOG-UUID"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"x-swift-cachetime"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"ali-swift-global-savetime"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(not sure)","find":{"item":"via","grep":"cache"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(Kunlun)","find":{"item":"via","grep":"kunlun"}}
 {"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-rid"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"x-powered-by-360wzb"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"WZWS-RAY"}}
 {"type":"Response.Item.Contains","app":"CDN.Knownsec_JSL","find":{"grep":"X-Via-JSL"}}
 {"type":"Response.Item.Contains","app":"CDN.Anquanbao","find":{"grep":"X-Powered-By-Anquanbao"}}
-{"type":"Response.WebServer.Contains","app":"CDN.Baidu_Su","find":{"grep":"yunjiasu-nginx"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Baidu_Su","find":{"grep":"yunjiasu"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Cloudflare","find":{"grep":"cloudflare"}}
+{"type":"Response.Item.Contains","app":"CDN.Cloudflare or Baidu_Su","find":{"grep":"cf-ray"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Shanghai_Yundun(not sure)","find":{"grep":"WAF/2.4-12.1"}}
 {"type":"Response.Item.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":"Powered-By-ChinaCache"}}
 {"type":"Response.Item.Contains","app":"CDN.VeryCloud_CDN","find":{"grep":"Powered-By-VeryCDN"}}
 {"type":"Response.Context.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":".lxdns.com"}}
