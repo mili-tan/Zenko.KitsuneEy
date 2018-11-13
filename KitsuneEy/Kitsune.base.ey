@@ -13,6 +13,8 @@
 {"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"X-NWS-LOG-UUID"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"x-swift-cachetime"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"ali-swift-global-savetime"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(not sure)","find":{"item":"via","grep":"cache"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(Kunlun)","find":{"item":"via","grep":"kunlun"}}
 {"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-rid"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"x-powered-by-360wzb"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"WZWS-RAY"}}
