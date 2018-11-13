@@ -9,7 +9,7 @@
 {"type":"Response.Item.Contains","app":"CDN.Github_Pages","find":{"grep":"x-github-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Fastly","find":{"grep":"x-fastly-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Netlify","find":{"grep":"x-nf-request-id"}}
-{"type":"Response.WebServer.Contains","app":"CDN.TencentCloud_COS","find":{"grep":"tencent-cos"}}
+{"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"NWS_TCloud"}}
 {"type":"Response.Item.Contains","app":"CDN.TencentCloud_CDN","find":{"grep":"X-NWS-LOG-UUID"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"x-swift-cachetime"}}
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN","find":{"grep":"ali-swift-global-savetime"}}
