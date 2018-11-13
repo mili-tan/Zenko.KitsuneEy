@@ -27,7 +27,10 @@
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":".wscloudcdn.com"}}
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":".wscdns.com"}}
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter_Tech)","find":{"grep":"(Cdn Cache Server V2.0)"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Dilian(Dnion)","find":{"grep":"DnionOS"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Dilian(Dnion)","find":{"item":"Via","grep":"(DLC-"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.QsSec_AntiDDos","find":{"item":"X-Powered-By-Defense","grep":"qssec"}}
+{"type":"Response.Context.Contains","app":"CDN.Microsoft_Azure_CDN(not sure)","find":{"grep":"azure"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.BaishanCloud_CDN(not sure)","find":{"item":"X-Ser","grep":"bc"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.Incapsula","find":{"item":"x-cdn","grep":"Incapsula"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.UCloud_CDN","find":{"item":"x-server-id","grep":"ucac"}}
