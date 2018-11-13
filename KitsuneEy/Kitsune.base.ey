@@ -21,6 +21,8 @@
 {"type":"Response.Item.Contains","app":"CDN.Knownsec_JSL","find":{"grep":"X-Via-JSL"}}
 {"type":"Response.Item.Contains","app":"CDN.Anquanbao","find":{"grep":"X-Powered-By-Anquanbao"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Baidu_Su","find":{"grep":"yunjiasu"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Cloudflare","find":{"grep":"cloudflare"}}
+{"type":"Response.Item.Contains","app":"CDN.Cloudflare or Baidu_Su","find":{"grep":"cf-ray"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Shanghai_Yundun(not sure)","find":{"grep":"WAF/2.4-12.1"}}
 {"type":"Response.Item.Contains","app":"CDN.Lanxun(ChinaCache)","find":{"grep":"Powered-By-ChinaCache"}}
 {"type":"Response.Item.Contains","app":"CDN.VeryCloud_CDN","find":{"grep":"Powered-By-VeryCDN"}}
