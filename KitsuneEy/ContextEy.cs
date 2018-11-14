@@ -16,14 +16,15 @@ namespace KitsuneEy
             return new WebClient().DownloadString(url);
         }
 
-        public static bool GetPageTitleContains(string url, string context)
+        public static bool GetPageTitleContains(string page, string context)
         {
-            return GetPageTitle(url).Contains(context);
+            return Regex.Match(page, @"\<title\b[^>]*\>\s*(?<Title>[\s\S]*?)\</title\>",
+                RegexOptions.IgnoreCase).Groups["Title"].Value.Contains(context);
         }
 
-        public static bool GetPageTextContains(string url, string context)
+        public static bool GetPageTextContains(string page, string context)
         {
-            return GetPageText(url).Contains(context);
+            return page.Contains(context);
         }
     }
 }

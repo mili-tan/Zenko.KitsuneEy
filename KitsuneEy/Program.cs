@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using MojoUnity;
 
 namespace KitsuneEy
@@ -21,6 +22,8 @@ namespace KitsuneEy
 
             var mHeaders = RouteEy.GetPage(args[0]).Headers;
             var mKeys = mHeaders.AllKeys.ToList().ConvertAll(x => x.ToLower());
+            var mContext = new WebClient().DownloadString(args[0]).ToLower();
+
             List<string> baseDict = File.ReadAllLines("base.ey").ToList();
 
             if (args.ToList().Contains("-i"))
@@ -56,7 +59,6 @@ namespace KitsuneEy
                     switch (jType)
                     {
                         //Response
-
                         case ("Response.Item.Contains"):
                             if (ResponseEy.GetItemContains(mHeaders,jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("HeadersFound : " + jApp);
@@ -82,7 +84,12 @@ namespace KitsuneEy
                             break;
 
                         //Index
+                        case ("Index.Context.Contains"):
+                            if (ContextEy.GetPageTextContains(mContext, jFind.AsObjectGetString("grep").ToLower()))
+                                Console.WriteLine("ContextFound : " + jApp);
+                            break;
 
+                        //End
                         default:
                             Console.WriteLine($"NotSupport : {jType} | {jApp} ({line})");
                             break;
