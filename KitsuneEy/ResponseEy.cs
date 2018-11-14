@@ -32,7 +32,7 @@ namespace KitsuneEy
 
         public static bool GetItemContains(WebHeaderCollection headers, string itemStr)
         {
-            return headers.AllKeys.Contains(itemStr);
+            return headers.AllKeys.ToList().ConvertAll(x => x.ToLower()).Contains(itemStr);
         }
 
         public static string GetItemValue(WebHeaderCollection headers, string itemStr)
@@ -42,7 +42,7 @@ namespace KitsuneEy
 
         public static bool GetItemValueContains(WebHeaderCollection headers, string itemStr, string contextStr)
         {
-            return headers.Get(itemStr).Contains(contextStr);
+            return headers.Get(itemStr).ToLower().Contains(contextStr);
         }
 
         public static bool GetContextContains(WebHeaderCollection headers, string contextStr)

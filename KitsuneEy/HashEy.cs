@@ -11,7 +11,6 @@ namespace KitsuneEy
         {
             MD5 md5 = new MD5CryptoServiceProvider();
             byte[] md5Ch;
-            //new WebClient().DownloadFile(url,"temp");
             using (MemoryStream stream = new MemoryStream(new WebClient().DownloadData(url)))
             {
                 md5Ch = md5.ComputeHash(stream);

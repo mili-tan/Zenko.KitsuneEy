@@ -6,12 +6,12 @@ namespace KitsuneEy
 {
     class RouteEy
     {
-        public static HttpWebResponse GetPage(string url)
+        public static HttpWebResponse GetPage(string url,bool allowAutoRedirect = true)
         {
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.AllowAutoRedirect = false;
+                request.AllowAutoRedirect = allowAutoRedirect;
                 return (HttpWebResponse)request.GetResponse();
             }
             catch (WebException e)

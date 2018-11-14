@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ContextEy.cs" />
     <Compile Include="HashEy.cs" />
+    <Compile Include="MojoUnityJson.cs" />
     <Compile Include="ResponseEy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
