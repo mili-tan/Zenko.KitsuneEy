@@ -50,26 +50,26 @@ namespace KitsuneEy
 
                         case ("Response.Item.Contains"):
                             if (ResponseEy.GetItemContains(mHeaders,jFind.AsObjectGetString("grep").ToLower()))
-                                Console.WriteLine("Headers Find : "+jApp);
+                                Console.WriteLine("HeadersFound : " + jApp);
                             break;
                         case ("Response.Context.Contains"):
                             if (ResponseEy.GetContextContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
-                                Console.WriteLine("Headers Find : " + jApp);
+                                Console.WriteLine("HeadersFound : " + jApp);
                             break;
                         case ("Response.WebServer.Contains"):
                             if (ResponseEy.GetItemContains(mHeaders, "server"))
                                 if (ResponseEy.GetWebServerContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
-                                    Console.WriteLine("Headers Find : " + jApp);
+                                    Console.WriteLine("HeadersFound : " + jApp);
                             break;
                         case ("Response.Cookie.Contains"):
                             if (ResponseEy.GetItemContains(mHeaders, "set-cookie"))
                                 if (ResponseEy.GetCookieContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
-                                    Console.WriteLine("Headers Find : " + jApp);
+                                    Console.WriteLine("HeadersFound : " + jApp);
                             break;
                         case ("Response.Item.Value.Contains"):
                             if (ResponseEy.GetItemContains(mHeaders,jFind.AsObjectGetString("item").ToLower()))
                                 if (ResponseEy.GetItemValueContains(mHeaders, jFind.AsObjectGetString("item").ToLower(), jFind.AsObjectGetString("grep").ToLower()))
-                                    Console.WriteLine("Headers Find : " + jApp);
+                                    Console.WriteLine("HeadersFound : " + jApp);
                             break;
 
                         //Index
