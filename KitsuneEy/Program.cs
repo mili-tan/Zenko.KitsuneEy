@@ -10,6 +10,15 @@ namespace KitsuneEy
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("  _  _______ _                          ______      \r\n" +
+                              " | |/ /_   _| |                        |  ____|     \r\n" +
+                              " |   /  | | | |_ ___ _   _ _ __   ___  | |__  _   _ \r\n" +
+                              " |  <   | | | __/ __| | | |  _ \\ / _ \\ |  __|| | | |\r\n" +
+                              " |   \\ _| |_| |_\\__ \\ |_| | | | | /__/ | |___| |_| |\r\n" +
+                              " |_|\\_\\_____|\\__|___/\\__ _|_| |_|\\___| |______\\__  |\r\n" +
+                              "                                               __/ |\r\n" +
+                              "                                              |___/ ");
+
             var mHeaders = RouteEy.GetPage(args[0]).Headers;
             var mKeys = mHeaders.AllKeys.ToList().ConvertAll(x => x.ToLower());
             List<string> baseDict = File.ReadAllLines("base.ey").ToList();
