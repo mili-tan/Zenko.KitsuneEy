@@ -88,6 +88,10 @@ namespace KitsuneEy
                             if (ContextEy.GetPageTextContains(mContext, jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("ContextFound : " + jApp);
                             break;
+                        case ("Index.Title.Contains"):
+                            if (ContextEy.GetPageTitleContains(mContext, jFind.AsObjectGetString("grep").ToLower()))
+                                Console.WriteLine("ContextFound : " + jApp);
+                            break;
 
                         //End
                         default:
