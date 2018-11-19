@@ -6,6 +6,7 @@
 #CDN&IDC
 {"type":"Response.Item.Contains","app":"CDN.Qiniu(cache)","find":{"grep":"x-qnm-cache"}}
 {"type":"Response.Item.Contains","app":"CDN.Qiniu(zone)","find":{"grep":"x-qiniu-zone"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Upyun(not sure)","find":{"grep":"marco"}}
 {"type":"Response.Item.Contains","app":"CDN.Github_Pages","find":{"grep":"x-github-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Fastly","find":{"grep":"x-fastly-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Netlify","find":{"grep":"x-nf-request-id"}}
