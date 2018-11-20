@@ -34,6 +34,10 @@
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter)","find":{"grep":".wscloudcdn.com"}}
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter)","find":{"grep":".wscdns.com"}}
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter)","find":{"grep":"(Cdn Cache Server V2.0)"}}
+{"type":"Response.Item.Contains","app":"CDN.Kuaiwang(FastWeb)","find":{"grep":"Fw-Via"}}
+{"type":"Response.Item.Contains","app":"CDN.Kuaiwang(FastWeb)","find":{"grep":"Fw-Cache-Status"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Vangen(YaoCdn)","find":{"grep":"CUWEBCACHE"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Vangen(CDNUnion)","find":{"grep":"CUDOWNCACHE"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Dilian(Dnion)","find":{"grep":"DnionOS"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.Dilian(Dnion)","find":{"item":"Via","grep":"(DLC-"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.QsSec_AntiDDos","find":{"item":"X-Powered-By-Defense","grep":"qssec"}}
