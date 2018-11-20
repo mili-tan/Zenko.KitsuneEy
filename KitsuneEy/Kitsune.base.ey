@@ -36,6 +36,11 @@
 {"type":"Response.Context.Contains","app":"CDN.Wangsu(ChinaNetCenter)","find":{"grep":"(Cdn Cache Server V2.0)"}}
 {"type":"Response.Item.Contains","app":"CDN.Kuaiwang(FastWeb)","find":{"grep":"Fw-Via"}}
 {"type":"Response.Item.Contains","app":"CDN.Kuaiwang(FastWeb)","find":{"grep":"Fw-Cache-Status"}}
+{"type":"Response.WebServer.Contains","app":"CDN.Kuaiwang(FastWeb)","find":{"grep":"fastmirror"}}
+{"type":"Response.WebServer.Contains","app":"CDN.NewDefend(FastWeb)","find":{"grep":"NewDefend"}}
+{"type":"Response.Item.Contains","app":"CDN.mMtrix(GosunVC)","find":{"grep":"GSVC-Key"}}
+{"type":"Response.WebServer.Contains","app":"CDN.mMtrix(GosunVC)","find":{"grep":"GSVC"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.mMtrix(GosunVC)","find":{"item":"Cache-Status","grep":"GSVC"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Vangen(YaoCdn)","find":{"grep":"CUWEBCACHE"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Vangen(CDNUnion)","find":{"grep":"CUDOWNCACHE"}}
 {"type":"Response.WebServer.Contains","app":"CDN.Dilian(Dnion)","find":{"grep":"DnionOS"}}
