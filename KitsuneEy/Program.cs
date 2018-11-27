@@ -25,6 +25,9 @@ namespace KitsuneEy
             var mContext = new WebClient().DownloadString(args[0]).ToLower();
 
             List<string> baseDict = File.ReadAllLines("base.ey").ToList();
+            List<string> exDict = new List<string>();
+            if (File.Exists("extension.ey"))
+                exDict = File.ReadAllLines("extension.ey").ToList();
 
             if (args.ToList().Contains("-i"))
                 Console.WriteLine(mHeaders.ToString());
@@ -58,45 +61,76 @@ namespace KitsuneEy
 
                     switch (jType)
                     {
-                        //Response
-                        case ("Response.Item.Contains"):
-                            if (ResponseEy.GetItemContains(mHeaders,jFind.AsObjectGetString("grep").ToLower()))
+                        case "Response.Item.Contains":
+                        {
+                            if (ResponseEy.GetItemContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("HeadersFound : " + jApp);
                             break;
-                        case ("Response.Context.Contains"):
+                        }
+                        case "Response.Context.Contains":
+                        {
                             if (ResponseEy.GetContextContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("HeadersFound : " + jApp);
                             break;
-                        case ("Response.WebServer.Contains"):
+                        }
+                        case "Response.WebServer.Contains":
+                        {
                             if (ResponseEy.GetItemContains(mHeaders, "server"))
                                 if (ResponseEy.GetWebServerContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
                                     Console.WriteLine("HeadersFound : " + jApp);
                             break;
-                        case ("Response.Cookie.Contains"):
+                        }
+                        case "Response.Cookie.Contains":
+                        {
                             if (ResponseEy.GetItemContains(mHeaders, "set-cookie"))
                                 if (ResponseEy.GetCookieContains(mHeaders, jFind.AsObjectGetString("grep").ToLower()))
                                     Console.WriteLine("HeadersFound : " + jApp);
                             break;
-                        case ("Response.Item.Value.Contains"):
-                            if (ResponseEy.GetItemContains(mHeaders,jFind.AsObjectGetString("item").ToLower()))
-                                if (ResponseEy.GetItemValueContains(mHeaders, jFind.AsObjectGetString("item").ToLower(), jFind.AsObjectGetString("grep").ToLower()))
+                        }
+                        case "Response.Item.Value.Contains":
+                        {
+                            if (ResponseEy.GetItemContains(mHeaders, jFind.AsObjectGetString("item").ToLower()))
+                                if (ResponseEy.GetItemValueContains(mHeaders, jFind.AsObjectGetString("item").ToLower(),
+                                    jFind.AsObjectGetString("grep").ToLower()))
                                     Console.WriteLine("HeadersFound : " + jApp);
                             break;
-
-                        //Index
-                        case ("Index.Context.Contains"):
+                        }
+                        case "Index.Context.Contains":
+                        {
                             if (ContextEy.GetPageTextContains(mContext, jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("ContextFound : " + jApp);
                             break;
-                        case ("Index.Title.Contains"):
+                        }
+                        case "Index.Title.Contains":
+                        {
                             if (ContextEy.GetPageTitleContains(mContext, jFind.AsObjectGetString("grep").ToLower()))
                                 Console.WriteLine("ContextFound : " + jApp);
                             break;
+                        }
+                    }
+                }
 
-                        //End
-                        default:
-                            Console.WriteLine($"NotSupport : {jType} | {jApp} ({line})");
-                            break;
+                if (args.ToList().Contains("-ex") || File.Exists("extension.ey"))
+                {
+                    foreach (var item in exDict)
+                    {
+                        if (string.IsNullOrEmpty(item) || item.Contains("#"))
+                            continue;
+
+                        var jItem = Json.Parse(item);
+                        var jFind = jItem.AsObjectGet("find");
+                        var jApp = jItem.AsObjectGetString("app");
+                        var jType = jItem.AsObjectGetString("type");
+
+                        switch (jType)
+                        {
+                            case "Page.Exists":
+                            {
+                                if (RouteEy.GetPageExists(args[0] + jFind.AsObjectGetString("grep").ToLower()))
+                                    Console.WriteLine("PageFound : " + jApp);
+                                break;
+                            }
+                        }
                     }
                 }
             }
