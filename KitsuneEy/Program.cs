@@ -130,6 +130,13 @@ namespace KitsuneEy
                                     Console.WriteLine("PageFound : " + jApp);
                                 break;
                             }
+                            case "Page.MD5":
+                            {
+                                if (HashEy.GetFileMd5Hash(args[0] + jFind.AsObjectGetString("grep").ToLower())
+                                    == jFind.AsObjectGetString("item").ToLower())
+                                    Console.WriteLine("PageFound : " + jApp);
+                                break;
+                            }
                         }
                     }
                 }
