@@ -53,10 +53,10 @@
 
 #Manager & Panel
 {"type":"Route.Exists","app":"Manager.phpMyAdmin","find":{"path":"/phpmyadmin/index.php"}}
-{"type":"Response.Cookie.Contain","app":"Panel.cPanel","find":{"path":"cpsession"}}
-{"type":"Response.Cookie.Contain","app":"Panel.cPanel","find":{"path":"cprelogin"}}
+{"type":"Response.Cookie.Contain","app":"Panel.cPanel","find":{"grep":"cpsession"}}
+{"type":"Response.Cookie.Contain","app":"Panel.cPanel","find":{"grep":"cprelogin"}}
 {"type":"Response.Item.Value.Contains","app":"Panel.cPanel","find":{"item":"WWW-Authenticate","grep":"cPanel"}}
-{"type":"Response.Cookie.Contain","app":"Panel.Baota","find":{"path":"BT_PANEL"}}
+{"type":"Response.Cookie.Contain","app":"Panel.Baota","find":{"grep":"BT_PANEL"}}
 {"type":"Response.WebServer.Contains","app":"Panel.AppNode","find":{"grep":"appnode"}}
 #Framework 
 {"type":"Response.Context.Contains","app":"Framework.ThinkPHP","find":{"grep":"thinkphp"}}
