@@ -17,7 +17,13 @@
 {"type":"Response.Item.Contains","app":"CDN.AliCloud_CDN(savetime)","find":{"grep":"ali-swift-global-savetime"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(not sure)","find":{"item":"via","grep":"cache"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.AliCloud_CDN(Kunlun)","find":{"item":"via","grep":"kunlun"}}
+{"type":"Response.WebServer.Contains","app":"CDN.AmazonS3","find":{"grep":"AmazonS3"}}
+{"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-cf-id"}}
+{"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-id-2"}}
+{"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-request-id"}}
 {"type":"Response.Item.Contains","app":"CDN.Amazon_CloudFront","find":{"grep":"x-amz-rid"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Amazon_CloudFront","find":{"item":"via","grep":"CloudFront"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Amazon_CloudFront","find":{"item":"via","grep":"cloudfront.net"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"x-powered-by-360wzb"}}
 {"type":"Response.Item.Contains","app":"CDN.Qihu360_WZB","find":{"grep":"WZWS-RAY"}}
 {"type":"Response.Item.Contains","app":"CDN.Knownsec_JSL","find":{"grep":"X-Via-JSL"}}
@@ -50,6 +56,11 @@
 {"type":"Response.Item.Value.Contains","app":"CDN.BaishanCloud_CDN(not sure)","find":{"item":"X-Ser","grep":"bc"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.Incapsula","find":{"item":"x-cdn","grep":"Incapsula"}}
 {"type":"Response.Item.Value.Contains","app":"CDN.UCloud_CDN(not sure)","find":{"item":"x-server-id","grep":"ucac"}}
+{"type":"Response.Item.Contains","app":"CDN.Akamai","find":{"grep":"X-Akamai-Transformed"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Limelight(not sure)","find":{"item":"X-Server-Name","grep":"az"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Limelight(not sure)","find":{"item":"Via","grep":"az-cache"}}
+{"type":"Response.Item.Value.Contains","app":"IDC.Hostker","find":{"item":"via","grep":"smartgslb.com"}}
+{"type":"Response.Item.Value.Contains","app":"IDC.Hostker","find":{"item":"x-cache","grep":"smartgslb.com"}}
 
 #Manager & Panel
 {"type":"Route.Exists","app":"Manager.phpMyAdmin","find":{"path":"/phpmyadmin/index.php"}}
