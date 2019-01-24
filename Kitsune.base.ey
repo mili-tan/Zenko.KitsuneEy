@@ -58,6 +58,9 @@
 {"type":"Response.Item.Value.Contains","app":"Panel.cPanel","find":{"item":"WWW-Authenticate","grep":"cPanel"}}
 {"type":"Response.Cookie.Contain","app":"Panel.Baota","find":{"grep":"BT_PANEL"}}
 {"type":"Response.WebServer.Contains","app":"Panel.AppNode","find":{"grep":"appnode"}}
+{"type":"Response.WebServer.Contains","app":"Panel.PleskOnyx","find":{"grep":"sw-cp-server"}}
+{"type":"Response.Cookie.Contain","app":"Panel.PleskOnyx","find":{"grep":"plesk"}}
+{"type":"Response.Item.Value.Contains","app":"Panel.PleskOnyx","find":{"item":"P3P","grep":"CP="}}
 #Framework 
 {"type":"Response.Context.Contains","app":"Framework.ThinkPHP","find":{"grep":"thinkphp"}}
 #Device
