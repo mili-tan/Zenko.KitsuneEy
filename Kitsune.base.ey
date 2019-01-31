@@ -2,6 +2,9 @@
 {"type":"Index.Context.Contains","app":"CMS.joomla","find":{"grep":"/media/system/js/caption.js"}}
 {"type":"Index.Context.Contains","app":"Blog.WordPress","find":{"grep":"meta name=\"generator\" content=\"WordPress "}}
 {"type":"Response.Cookie.Contains","app":"BBS.Discuz","find":{"grep":"_saltkey="}}
+{"type":"Response.Item.Value.Contains","app":"CMS.JoomlaWorks","find":{"item":"X-Content-Powered-By","grep":"JoomlaWorks"}}
+{"type":"Response.Item.Value.Contains","app":"CMS.JoomlaWorks","find":{"item":"X-Powered-By","grep":"JoomlaWorks"}}
+{"type":"Response.WebServer.Contains","app":"CMS.JoomlaWorks","find":{"grep":"Kontrol"}}
 
 #CDN&IDC
 {"type":"Response.Item.Contains","app":"CDN.Qiniu(cache)","find":{"grep":"x-qnm-cache"}}
@@ -61,6 +64,7 @@
 {"type":"Response.Item.Value.Contains","app":"CDN.Limelight(not sure)","find":{"item":"Via","grep":"az-cache"}}
 {"type":"Response.Item.Value.Contains","app":"IDC.Hostker","find":{"item":"via","grep":"smartgslb.com"}}
 {"type":"Response.Item.Value.Contains","app":"IDC.Hostker","find":{"item":"x-cache","grep":"smartgslb.com"}}
+{"type":"Response.Item.Value.Contains","app":"CDN.Varnish","find":{"item":"Via","grep":"varnish"}}
 
 #Manager & Panel
 {"type":"Route.Exists","app":"Manager.phpMyAdmin","find":{"path":"/phpmyadmin/index.php"}}
