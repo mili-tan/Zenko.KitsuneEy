@@ -72,6 +72,11 @@
 {"type":"Response.WebServer.Contains","app":"Panel.PleskOnyx","find":{"grep":"sw-cp-server"}}
 {"type":"Response.Cookie.Contain","app":"Panel.PleskOnyx","find":{"grep":"plesk"}}
 {"type":"Response.Item.Value.Contains","app":"Panel.PleskOnyx","find":{"item":"P3P","grep":"CP="}}
+{"type":"Response.Item.Value.Contains","app":"Panel.PleskWin","find":{"item":"X-Powered-By-Plesk","grep":"PleskWin"}}
+{"type":"Response.Item.Value.Contains","app":"Panel.PleskLin","find":{"item":"X-Powered-By-Plesk","grep":"PleskLin"}}
+{"type":"Response.Item.Value.Contains","app":"Panel.PleskWin","find":{"item":"X-Powered-By","grep":"PleskWin"}}
+{"type":"Response.Item.Value.Contains","app":"Panel.PleskLin","find":{"item":"X-Powered-By","grep":"PleskLin"}}
+
 #Framework 
 {"type":"Response.Context.Contains","app":"Framework.ThinkPHP","find":{"grep":"thinkphp"}}
 #Device
